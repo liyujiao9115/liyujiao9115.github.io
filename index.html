@@ -3,11 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Untitled Document</title>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script>
+      var soundID = "Thunder";
+
+      function loadSound () {
+        createjs.Sound.registerSound("assets/thunder.ogg", soundID);
+      }
+
+      function playSound () {
+        createjs.Sound.play(soundID);
+      }
+    </script>
 </head>
 
 <body>
-<div>
-   <h1>This is for test only</h1>
-</div>
+<body onload="loadSound();">
+    <button onclick="playSound();" class="playSound">Play Sound</button>
+</body>
 </body>
 </html>
