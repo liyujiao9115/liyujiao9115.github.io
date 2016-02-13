@@ -1,23 +1,141 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<!-- BASICS -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Amoeba free one page responsive bootstrap site template</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
+		<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link href="src/jquery.counter-analog3.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="src/jquery.counter.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="src/jquery.counter-analog3.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="src/jquery.counter.js" type="text/javascript"></script>
+        
+    </head>
     <script>
-      var soundID = "Thunder";
+$(document).ready(function(){
+	var times = timer();
+	$(".counter").text(times);
+	$(".counter").counter();
+   function timer() {
+        var date = new Date();
+        dateMsec = date.getTime();
 
-      function loadSound () {
-        createjs.Sound.registerSound("assets/thunder.ogg", soundID);
-      }
+        date.setFullYear(1995)
+        date.setDate(4);
+        date.setMonth(12 - 1);
+        date.setHours(0, 0, 0, 0);
 
-      function playSound () {
-        createjs.Sound.play(soundID);
-      }
+        // Get the difference in milliseconds.
+        var interval = dateMsec - date.getTime();
+		
+		return interval;
+   }
+
+});
+
+        
     </script>
-</head>
+	 
+    <body>
+		<section id="header" class="appear"></section>
+		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+			 <div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+					<h1><a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">			Li YuJiao
+					</a></h1>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+						<li class="active"><a href="index.html"></a></li>
+						<li><a href="#section-about">l</a></li>
+						<li><a href="#section-works">Y</a></li>
+						<li><a href="#section-contact">J</a></li>
+					</ul>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</div>
 
-<body onload="loadSound();">
-    <button onclick="playSound();" class="playSound">Play Sound</button>
-</body>
+		<section class="featured">
+			<div class="container"> 
+				<div class="row mar-bot40">
+					<div class="col-md-6 col-md-offset-3">
+						
+						<div class="align-center">
+							<i class="fa fa-flask fa-5x mar-bot20"></i>
+							<h2 class="slogan">The Most Beautiful Thing</h2>
+							<p>
+                            If everything in the world is up for sale, time will become the most expensive and beautiful one.</br>  
+                            The wisdom way to cherish time is to remember how much you have got instead of how much you have lost.</br>
+							时间是世界上最珍贵最美丽的事物,</br>
+							不要在意有多少过去已经逝去，只需牢记有多少曾经已然走过。</br>
+				
+							</p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- services -->
+		<section id="section-services" class="section pad-bot30 bg-white">
+		<div class="container"> 
+        
+		<div class="align-center">
+    <span id="ad" class="counter counter-analog3" data-direction="up" data-format="9999999999999">0000000000000</span>
+ 
+         </div>
+		</div>
+		</section>
+			
+		<!-- spacer section:testimonial -->
+		<section style="background-color:#42958B" class="section" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">				
+					<div class="col-lg-12">
+							<div class="align-center">
+										<div class="testimonial pad-top40 pad-bot40 clearfix">
+											<h5>
+												Best Wishes to You, Happy Valentine's Day
+											</h5>
+											<br/>
+											<span class="author">&mdash; HUANG DONG <a href="#">www.李玉蛟.com</a></span>
+										</div>
+
+								</div>
+							</div>
+					</div>
+				
+			</div>		
+		</section>
+			
+		
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	
+	<script src="js/jquery.easing.1.3.js"></script>
+
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/skrollr.min.js"></script>		
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.appear.js"></script>
+    <script src="js/main.js"></script>
+	</body>
 </html>
